@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <title>Document</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cooperltbt";
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(https://static.asianpaints.com/content/dam/asian_paints/colours/swatches/470.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+#nav{
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    padding: 0 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+#nav>h1{
+    font-size: 31px;
+    font-weight: 100;
+    color: #000;
+}
+#nav #part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#nav #part2 a{
+    text-decoration: none;
+    color: #222;
+    margin: 20px;
+}
+#nav #part2 a:nth-last-child(1){
+    padding: 7px 18px;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #000;
+}
+#main>h1{
+    font-size: 9vw;
+    width: 60%;
+    text-align: center;
+    position: relative;
+    z-index: 99;
+    font-weight: 90;
+    text-transform: capitalize;
+    color: rgb(87, 9, 9);
+}
+#main>h1::after{
+    content: "";
+    position: absolute;
+    width: 35%;
+    height: 16px;
+    background-image: url(https://thisisdigital.co.uk/dist/images/underline-green.svg);
+    bottom: -3%;
+    left: 50%;
+    background-size: cover;
+    transform: translate(-50%,0);
+}
+#main #img1{
+    height: 470px;
+    width: 270px;
+    position: absolute;
+    left: 6%;
+    top: 20%;
+}
+#main #img2{
+    height: 250px;
+    width: 280px;
+    position: absolute;
+    right: 25%;
+    top: 18%;
+}
+#main #img3{
+    height: 260px;
+    width: 280px;
+    position: absolute;
+    right: 7%;
+    bottom: 6%;
+}
+#main img{
+    transition: margin 0.8s ease;
+}
+#main img:hover{
+    margin-top: -20px;
+}
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="nav">
+            <h1>We are open now!</h1>
+            <div id="part2">
+                <a href="#">Services</a>
+                <a href="#">Work</a>
+                <a href="#">About</a>
+                <a href="#">Culture</a>
+                <a href="#">Careers</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+        <h1>A Cup of Coffee</h1>
+        
+        <img src="https://i.pinimg.com/736x/2c/de/d3/2cded3b01f56b2ce8b1f6589ae4c7f44.jpg" alt="" id="img1">
+        <img src="https://www.fertilityfamily.co.uk/wp-content/uploads/2023/10/PCOS-and-coffee-scaled-1.jpg" alt="" id="img2">
+        <img src="https://b.zmtcdn.com/data/collections/174bba4eff351eb4ebb5a28044d6e801_1689766713.png" alt="" id="img3">
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        gsap.from("#img1",{
+    delay:0.4,
+    opacity:0,
+    duration:1,
+    y:60
+})
+gsap.from("#img2",{
+    delay:0.4,
+    opacity:0,
+    duration:1,
+    x:60
+})
+gsap.from("#img3",{
+    delay:0.4,
+    opacity:0,
+    duration:1,
+    y:-60
+})
+gsap.from("#main h1",{
+    delay:0.4,
+    opacity:0,
+    duration:1,
+})
+    </script>
+</body>
+
+</html>
